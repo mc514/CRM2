@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class='container mt-5'>
+    <div class="row">
+        <div class="col-md">
+            <div class="card card-body">
+                <h2>Customers List</h2>
+            </div>
+            <div class="card card-body">
+                <table class="table">
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone Number</th>
+                        <th>Email Address</th>
+                    </tr>
+                    {% for customer in customers %}
+                        <tr>
+                            <td>{{customer.name}}</td>
+                            <td>{{customer.phone}}</td>
+                            <td>{{customer.email}}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+        
+    </div>
+</div>
+{% endblock content %}
